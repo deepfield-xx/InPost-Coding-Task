@@ -10,7 +10,7 @@
 		0ABB2A19C1443362ECFE34A7 /* Pods_InPost_Interview_Coding_TaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
-		D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* Main.storyboard */; };
+		D671D95F2913E528001FA9D5 /* PackListController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* PackListController.storyboard */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
 		D671D9642913E529001FA9D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */; };
 		D671D96F2913E529001FA9D5 /* InPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D96E2913E529001FA9D5 /* InPostTests.swift */; };
@@ -52,7 +52,7 @@
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D671D95B2913E528001FA9D5 /* PackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListController.swift; sourceTree = "<group>"; };
-		D671D95E2913E528001FA9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D671D95E2913E528001FA9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PackListController.storyboard; sourceTree = "<group>"; };
 		D671D9602913E529001FA9D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D671D9632913E529001FA9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D671D9652913E529001FA9D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,6 +120,64 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B37EFC572AE4895F0053F666 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D671D98A2913ED95001FA9D5 /* Controls */,
+				B37EFC582AE489740053F666 /* Navigation */,
+				D671D9892913E685001FA9D5 /* Screen */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B37EFC582AE489740053F666 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D671D98B2913EDA4001FA9D5 /* IPNavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		B37EFC592AE4899E0053F666 /* PackListController */ = {
+			isa = PBXGroup;
+			children = (
+				D671D95D2913E528001FA9D5 /* PackListController.storyboard */,
+				D671D95B2913E528001FA9D5 /* PackListController.swift */,
+			);
+			path = PackListController;
+			sourceTree = "<group>";
+		};
+		B37EFC5A2AE48AEE0053F666 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B37EFC5B2AE48AFE0053F666 /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B37EFC5B2AE48AFE0053F666 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B37EFC5C2AE48B070053F666 /* UIFont */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B37EFC5C2AE48B070053F666 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		B37EFC5D2AE5B1BF0053F666 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D671D9952915110C001FA9D5 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D671D94B2913E528001FA9D5 = {
 			isa = PBXGroup;
 			children = (
@@ -144,12 +202,13 @@
 		D671D9562913E528001FA9D5 /* InPost Interview Coding Task */ = {
 			isa = PBXGroup;
 			children = (
-				D671D9872913E649001FA9D5 /* App */,
-				D671D98A2913ED95001FA9D5 /* Controls */,
-				D671D98D2913F297001FA9D5 /* Model */,
-				D671D9952915110C001FA9D5 /* Networking */,
-				D671D9892913E685001FA9D5 /* Screen */,
 				D671D9652913E529001FA9D5 /* Info.plist */,
+				D671D9872913E649001FA9D5 /* App */,
+				D671D9882913E677001FA9D5 /* Assets */,
+				D671D98D2913F297001FA9D5 /* Model */,
+				B37EFC5D2AE5B1BF0053F666 /* Services */,
+				B37EFC572AE4895F0053F666 /* UI */,
+				B37EFC5A2AE48AEE0053F666 /* Utils */,
 			);
 			path = "InPost Interview Coding Task";
 			sourceTree = "<group>";
@@ -165,7 +224,6 @@
 		D671D9872913E649001FA9D5 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D671D9882913E677001FA9D5 /* Assets */,
 				D671D9572913E528001FA9D5 /* AppDelegate.swift */,
 			);
 			path = App;
@@ -175,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				D671D9602913E529001FA9D5 /* Assets.xcassets */,
-				D671D95D2913E528001FA9D5 /* Main.storyboard */,
 				D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */,
 			);
 			path = Assets;
@@ -184,7 +241,7 @@
 		D671D9892913E685001FA9D5 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				D671D95B2913E528001FA9D5 /* PackListController.swift */,
+				B37EFC592AE4899E0053F666 /* PackListController */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -193,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				D671D9922913F81D001FA9D5 /* PackView */,
-				D671D98B2913EDA4001FA9D5 /* IPNavigationController.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -344,7 +400,7 @@
 				D671D9642913E529001FA9D5 /* LaunchScreen.storyboard in Resources */,
 				D671D99E2915139F001FA9D5 /* packs.json in Resources */,
 				D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */,
-				D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */,
+				D671D95F2913E528001FA9D5 /* PackListController.storyboard in Resources */,
 				D671D9942913F82E001FA9D5 /* PackView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,12 +569,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D671D95D2913E528001FA9D5 /* Main.storyboard */ = {
+		D671D95D2913E528001FA9D5 /* PackListController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D671D95E2913E528001FA9D5 /* Base */,
 			);
-			name = Main.storyboard;
+			name = PackListController.storyboard;
 			sourceTree = "<group>";
 		};
 		D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */ = {
@@ -660,7 +716,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "InPost Recruitment Task";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -693,7 +748,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "InPost Recruitment Task";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

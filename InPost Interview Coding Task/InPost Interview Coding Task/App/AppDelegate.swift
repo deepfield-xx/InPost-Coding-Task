@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func buildStartingView() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "PackListController", bundle: nil)
         let packListController = storyboard.instantiateViewController(withIdentifier: "PackListController") as! PackListController
         
         window = UIWindow(frame: UIScreen.main.bounds)
