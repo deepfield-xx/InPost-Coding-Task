@@ -5,7 +5,7 @@
 //  Created by Damian Piwowarski on 03/11/2022.
 //
 
-import Foundation
+import UIKit
 
 /**
  * List of possible statuses with priority order.
@@ -24,9 +24,41 @@ import Foundation
  * 13. PICKUP_TIME_EXPIRED
  */
 
+enum PackStatus: String, Codable {
+    case created = "CREATED"
+    case confirmed = "CONFIRMED"
+    case adoptedAtSourceBranch = "ADOPTED_AT_SOURCE_BRANCH"
+    case sentFromSourceBranch = "SENT_FROM_SOURCE_BRANCH"
+    case adoptedAtSortingCenter = "ADOPTED_AT_SORTING_CENTER"
+    case sentFromSortingCenter = "SENT_FROM_SORTING_CENTER"
+    case other = "OTHER"
+    case delivered = "DELIVERED"
+    case returnedToSender = "RETURNED_TO_SENDER"
+    case avizo = "AVIZO"
+    case outForDelivery = "OUT_FOR_DELIVERY"
+    case readyToPickup = "READY_TO_PICKUP"
+    case pickupTimeExpired = "PICKUP_TIME_EXPIRED"
+    case unknown
+    
+    var image: UIImage? {
+        switch self {
+        case .outForDelivery:
+            return UIImage(named: "Kurier")
+        case .readyToPickup:
+            return UIImage(named: "Paczkomat")
+        default:
+            return nil
+        }
+    }
+}
+
+extension PackStatus: UnknownCaseRepresentable {
+    static var unknownCase: PackStatus = .unknown
+}
+
 struct Pack: Codable {
     let id: String
-    let status: String
+    let status: PackStatus
     let sender: String
     let expiryDate: Date?
     let pickupDate: Date?

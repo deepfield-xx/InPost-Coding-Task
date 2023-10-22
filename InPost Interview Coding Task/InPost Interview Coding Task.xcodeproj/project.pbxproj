@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0ABB2A19C1443362ECFE34A7 /* Pods_InPost_Interview_Coding_TaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */; };
+		B37EFC642AE5B2550053F666 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B37EFC5F2AE5B2550053F666 /* Montserrat-SemiBold.otf */; };
+		B37EFC652AE5B2550053F666 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B37EFC602AE5B2550053F666 /* Montserrat-Medium.otf */; };
+		B37EFC662AE5B2550053F666 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B37EFC612AE5B2550053F666 /* Montserrat-Bold.otf */; };
+		B37EFC672AE5B2550053F666 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B37EFC622AE5B2550053F666 /* Montserrat-ExtraBold.otf */; };
+		B37EFC682AE5B2550053F666 /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B37EFC632AE5B2550053F666 /* Montserrat-Black.otf */; };
+		B37EFC6A2AE5B2B30053F666 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37EFC692AE5B2B30053F666 /* UIFont+Extension.swift */; };
+		B37EFC6D2AE5B47F0053F666 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37EFC6C2AE5B47F0053F666 /* UIColor+Extension.swift */; };
+		B37EFC712AE5C2430053F666 /* UnknownCaseRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37EFC702AE5C2430053F666 /* UnknownCaseRepresentable.swift */; };
+		B37EFC742AE5D4D90053F666 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37EFC732AE5D4D90053F666 /* NSAttributedString+Extension.swift */; };
+		B37EFC772AE5D6930053F666 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37EFC762AE5D6930053F666 /* UILabel+Extension.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D95F2913E528001FA9D5 /* PackListController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* PackListController.storyboard */; };
@@ -49,6 +59,16 @@
 		871FC296EE090F4634A2C236 /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37EFC5F2AE5B2550053F666 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		B37EFC602AE5B2550053F666 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		B37EFC612AE5B2550053F666 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		B37EFC622AE5B2550053F666 /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
+		B37EFC632AE5B2550053F666 /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		B37EFC692AE5B2B30053F666 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		B37EFC6C2AE5B47F0053F666 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B37EFC702AE5C2430053F666 /* UnknownCaseRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownCaseRepresentable.swift; sourceTree = "<group>"; };
+		B37EFC732AE5D4D90053F666 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		B37EFC762AE5D6930053F666 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D671D95B2913E528001FA9D5 /* PackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListController.swift; sourceTree = "<group>"; };
@@ -150,6 +170,7 @@
 		B37EFC5A2AE48AEE0053F666 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B37EFC6E2AE5C1C80053F666 /* Protocols */,
 				B37EFC5B2AE48AFE0053F666 /* Extension */,
 			);
 			path = Utils;
@@ -158,6 +179,9 @@
 		B37EFC5B2AE48AFE0053F666 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B37EFC752AE5D6790053F666 /* UILabel */,
+				B37EFC722AE5D4C20053F666 /* NSAttributedString */,
+				B37EFC6B2AE5B4720053F666 /* UIColor */,
 				B37EFC5C2AE48B070053F666 /* UIFont */,
 			);
 			path = Extension;
@@ -166,6 +190,7 @@
 		B37EFC5C2AE48B070053F666 /* UIFont */ = {
 			isa = PBXGroup;
 			children = (
+				B37EFC692AE5B2B30053F666 /* UIFont+Extension.swift */,
 			);
 			path = UIFont;
 			sourceTree = "<group>";
@@ -176,6 +201,58 @@
 				D671D9952915110C001FA9D5 /* Networking */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B37EFC5E2AE5B2370053F666 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B37EFC632AE5B2550053F666 /* Montserrat-Black.otf */,
+				B37EFC612AE5B2550053F666 /* Montserrat-Bold.otf */,
+				B37EFC622AE5B2550053F666 /* Montserrat-ExtraBold.otf */,
+				B37EFC602AE5B2550053F666 /* Montserrat-Medium.otf */,
+				B37EFC5F2AE5B2550053F666 /* Montserrat-SemiBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B37EFC6B2AE5B4720053F666 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				B37EFC6C2AE5B47F0053F666 /* UIColor+Extension.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		B37EFC6E2AE5C1C80053F666 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B37EFC6F2AE5C1D90053F666 /* UnknownCaseRepresentable */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B37EFC6F2AE5C1D90053F666 /* UnknownCaseRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				B37EFC702AE5C2430053F666 /* UnknownCaseRepresentable.swift */,
+			);
+			path = UnknownCaseRepresentable;
+			sourceTree = "<group>";
+		};
+		B37EFC722AE5D4C20053F666 /* NSAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				B37EFC732AE5D4D90053F666 /* NSAttributedString+Extension.swift */,
+			);
+			path = NSAttributedString;
+			sourceTree = "<group>";
+		};
+		B37EFC752AE5D6790053F666 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				B37EFC762AE5D6930053F666 /* UILabel+Extension.swift */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 		D671D94B2913E528001FA9D5 = {
@@ -232,6 +309,7 @@
 		D671D9882913E677001FA9D5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B37EFC5E2AE5B2370053F666 /* Fonts */,
 				D671D9602913E529001FA9D5 /* Assets.xcassets */,
 				D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */,
 			);
@@ -397,11 +475,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37EFC672AE5B2550053F666 /* Montserrat-ExtraBold.otf in Resources */,
 				D671D9642913E529001FA9D5 /* LaunchScreen.storyboard in Resources */,
 				D671D99E2915139F001FA9D5 /* packs.json in Resources */,
 				D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */,
+				B37EFC642AE5B2550053F666 /* Montserrat-SemiBold.otf in Resources */,
 				D671D95F2913E528001FA9D5 /* PackListController.storyboard in Resources */,
+				B37EFC682AE5B2550053F666 /* Montserrat-Black.otf in Resources */,
+				B37EFC652AE5B2550053F666 /* Montserrat-Medium.otf in Resources */,
 				D671D9942913F82E001FA9D5 /* PackView.xib in Resources */,
+				B37EFC662AE5B2550053F666 /* Montserrat-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,12 +612,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37EFC772AE5D6930053F666 /* UILabel+Extension.swift in Sources */,
+				B37EFC6A2AE5B2B30053F666 /* UIFont+Extension.swift in Sources */,
+				B37EFC712AE5C2430053F666 /* UnknownCaseRepresentable.swift in Sources */,
 				D671D9972915111C001FA9D5 /* PackNetworking.swift in Sources */,
 				D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */,
 				D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */,
 				D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */,
 				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,
+				B37EFC742AE5D4D90053F666 /* NSAttributedString+Extension.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,
+				B37EFC6D2AE5B47F0053F666 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
