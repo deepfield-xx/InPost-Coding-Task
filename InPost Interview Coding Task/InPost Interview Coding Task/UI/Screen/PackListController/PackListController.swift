@@ -9,7 +9,7 @@ import UIKit
 
 class PackListController: UIViewController {
 
-    @IBOutlet private var stackView: UIStackView!
+    @IBOutlet private(set) var stackView: UIStackView!
     
     private let packNetworking = PackNetworking()
     
@@ -65,5 +65,4 @@ class PackListController: UIViewController {
         packView.setup(pack: pack)
         stackView.addArrangedSubview(packView)
     }
-
 }

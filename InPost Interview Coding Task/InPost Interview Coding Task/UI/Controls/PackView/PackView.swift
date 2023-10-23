@@ -11,14 +11,14 @@ class PackView: UIView {
     
     @IBOutlet private var contentView: UIView!
     
-    @IBOutlet private var contentContainer: UIView!
-    @IBOutlet private var numberTitleLabel: UILabel!
-    @IBOutlet private var numberLabel: UILabel!
-    @IBOutlet private var statusTitleLabel: UILabel!
-    @IBOutlet private var statusLabel: UILabel!
-    @IBOutlet private var senderTitleLabel: UILabel!
-    @IBOutlet private var senderLabel: UILabel!
-    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private(set) var contentContainer: UIView!
+    @IBOutlet private(set) var numberTitleLabel: UILabel!
+    @IBOutlet private(set) var numberLabel: UILabel!
+    @IBOutlet private(set) var statusTitleLabel: UILabel!
+    @IBOutlet private(set) var statusLabel: UILabel!
+    @IBOutlet private(set) var senderTitleLabel: UILabel!
+    @IBOutlet private(set) var senderLabel: UILabel!
+    @IBOutlet private(set) var imageView: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
