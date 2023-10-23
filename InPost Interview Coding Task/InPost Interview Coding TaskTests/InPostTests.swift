@@ -42,12 +42,12 @@ final class InPostTests: XCTestCase {
         XCTAssertEqual(subviews.firstIndex(of: lastGroupView!), 2)
         
         let packViews = subviews.filter { $0 is PackView } as? [PackView]
-        XCTAssertEqual(packViews?.count, 7)
+        XCTAssertEqual(packViews?.count, 5)
         
         let url = Bundle.main.url(forResource: "packs", withExtension: "json")!
         let data = try! Data(contentsOf: url)
         let result = try! jsonDecoder.decode([Pack].self, from: data)
-        let resultIds = result.map { $0.id }
+        let resultIds = result.filter { $0.status != .unknown }.map { $0.id }
         
         XCTAssertEqual(resultIds.count, packViews?.count)
         packViews?.forEach {

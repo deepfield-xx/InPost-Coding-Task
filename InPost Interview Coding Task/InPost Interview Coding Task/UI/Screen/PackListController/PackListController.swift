@@ -29,7 +29,8 @@ class PackListController: UIViewController {
             self.removePacks()
             
             if case .success(let packs) = result {
-                let readyToPickupPacks = packs.filter { $0.status == .readyToPickup }
+                let filteredPacks = packs.filter { $0.status != .unknown }
+                let readyToPickupPacks = filteredPacks.filter { $0.status == .readyToPickup }
                 if readyToPickupPacks.isEmpty == false {
                     self.addGroupView("Gotowe do odbioru", isFirst: true)
                     readyToPickupPacks.forEach {
@@ -37,7 +38,7 @@ class PackListController: UIViewController {
                     }
                 }
                 
-                let restOfthePacks = packs.filter { $0.status != .readyToPickup }
+                let restOfthePacks = filteredPacks.filter { $0.status != .readyToPickup }
                 if restOfthePacks.isEmpty == false {
                     self.addGroupView("Pozostałe")
                     restOfthePacks.forEach {
