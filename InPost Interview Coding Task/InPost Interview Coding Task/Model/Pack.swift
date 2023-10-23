@@ -70,3 +70,46 @@ struct Pack: Codable {
     let storedDate: Date?
     let shipmentType: String
 }
+
+typealias OrderPredicate = (Pack, Pack) -> Bool
+extension Array where Element == Pack {
+    func sortPacks() -> [Pack] {
+        return sorted { lhs, rhs in
+            let predicates: [OrderPredicate] = [
+                { $0.status.priority > $1.status.priority },
+                {
+                    guard let pickupDate1 = $0.pickupDate, let pickupDate2 = $1.pickupDate else {
+                        return false
+                    }
+                    
+                    return pickupDate1 < pickupDate2
+                },
+                {
+                    guard let expiryDate1 = $0.expiryDate, let expiryDate2 = $1.expiryDate else {
+                        return false
+                    }
+                
+                    return expiryDate1 < expiryDate2
+                },
+                {
+                    guard let storedDate1 = $0.storedDate, let storedDate2 = $1.storedDate else {
+                        return false
+                    }
+                    
+                    return storedDate1 < storedDate2
+                },
+                { $0.id < $1.id }
+            ]
+            
+            for predicate in predicates {
+                if !predicate(lhs, rhs) && !predicate(rhs, lhs) {
+                    continue
+                }
+                
+                return predicate(lhs, rhs)
+            }
+            
+            return false
+        }
+    }
+}
