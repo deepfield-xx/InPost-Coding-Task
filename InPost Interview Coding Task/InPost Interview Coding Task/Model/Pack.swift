@@ -24,7 +24,7 @@ import UIKit
  * 13. PICKUP_TIME_EXPIRED
  */
 
-enum PackStatus: String, Codable {
+enum PackStatus: String, Codable, CaseIterable {
     case created = "CREATED"
     case confirmed = "CONFIRMED"
     case adoptedAtSourceBranch = "ADOPTED_AT_SOURCE_BRANCH"
@@ -38,7 +38,7 @@ enum PackStatus: String, Codable {
     case outForDelivery = "OUT_FOR_DELIVERY"
     case readyToPickup = "READY_TO_PICKUP"
     case pickupTimeExpired = "PICKUP_TIME_EXPIRED"
-    case unknown
+    case unknown = "UNKNOWN"
     
     var image: UIImage? {
         switch self {
@@ -49,6 +49,11 @@ enum PackStatus: String, Codable {
         default:
             return nil
         }
+    }
+    
+    var priority: Int {
+        let allCases = PackStatus.allCases
+        return allCases.firstIndex(of: self) ?? allCases.count
     }
 }
 

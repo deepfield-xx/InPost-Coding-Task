@@ -18,6 +18,7 @@
 		B37EFC712AE5C2430053F666 /* UnknownCaseRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37EFC702AE5C2430053F666 /* UnknownCaseRepresentable.swift */; };
 		B37EFC742AE5D4D90053F666 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37EFC732AE5D4D90053F666 /* NSAttributedString+Extension.swift */; };
 		B37EFC772AE5D6930053F666 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37EFC762AE5D6930053F666 /* UILabel+Extension.swift */; };
+		B3B6EE422AE6637900451286 /* PackListGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B6EE412AE6637900451286 /* PackListGroupView.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D95F2913E528001FA9D5 /* PackListController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* PackListController.storyboard */; };
@@ -69,6 +70,7 @@
 		B37EFC702AE5C2430053F666 /* UnknownCaseRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownCaseRepresentable.swift; sourceTree = "<group>"; };
 		B37EFC732AE5D4D90053F666 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		B37EFC762AE5D6930053F666 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		B3B6EE412AE6637900451286 /* PackListGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListGroupView.swift; sourceTree = "<group>"; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D671D95B2913E528001FA9D5 /* PackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,14 @@
 			path = UILabel;
 			sourceTree = "<group>";
 		};
+		B3B6EE402AE6632E00451286 /* PackListGroupView */ = {
+			isa = PBXGroup;
+			children = (
+				B3B6EE412AE6637900451286 /* PackListGroupView.swift */,
+			);
+			path = PackListGroupView;
+			sourceTree = "<group>";
+		};
 		D671D94B2913E528001FA9D5 = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +337,7 @@
 		D671D98A2913ED95001FA9D5 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				B3B6EE402AE6632E00451286 /* PackListGroupView */,
 				D671D9922913F81D001FA9D5 /* PackView */,
 			);
 			path = Controls;
@@ -621,6 +632,7 @@
 				D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */,
 				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,
 				B37EFC742AE5D4D90053F666 /* NSAttributedString+Extension.swift in Sources */,
+				B3B6EE422AE6637900451286 /* PackListGroupView.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,
 				B37EFC6D2AE5B47F0053F666 /* UIColor+Extension.swift in Sources */,
 			);

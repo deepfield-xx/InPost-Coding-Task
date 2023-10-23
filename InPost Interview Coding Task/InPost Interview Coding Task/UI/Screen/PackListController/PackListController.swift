@@ -17,16 +17,32 @@ class PackListController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "Lista przesyłek"
         
+        view.backgroundColor = .groupViewGray
+        
         loadPacks()
     }
     
     private func loadPacks() {
-        packNetworking.getPacks { result in
+        packNetworking.getPacks { [weak self] result in
+            guard let self = self else { return }
+            
             self.removePacks()
             
             if case .success(let packs) = result {
-                packs.forEach { pack in
-                    self.addPackView(pack)
+                let readyToPickupPacks = packs.filter { $0.status == .readyToPickup }
+                if readyToPickupPacks.isEmpty == false {
+                    self.addGroupView("Gotowe do odbioru", isFirst: true)
+                    readyToPickupPacks.forEach {
+                        self.addPackView($0)
+                    }
+                }
+                
+                let restOfthePacks = packs.filter { $0.status != .readyToPickup }
+                if restOfthePacks.isEmpty == false {
+                    self.addGroupView("Pozostałe")
+                    restOfthePacks.forEach {
+                        self.addPackView($0)
+                    }
                 }
             }
         }
@@ -36,6 +52,12 @@ class PackListController: UIViewController {
         stackView.arrangedSubviews.forEach { subview in
             subview.removeFromSuperview()
         }
+    }
+    
+    private func addGroupView(_ groupName: String?, isFirst: Bool = false) {
+        let groupView = PackListGroupView(isFirst: isFirst)
+        groupView.setup(groupName: groupName)
+        stackView.addArrangedSubview(groupView)
     }
     
     private func addPackView(_ pack: Pack) {

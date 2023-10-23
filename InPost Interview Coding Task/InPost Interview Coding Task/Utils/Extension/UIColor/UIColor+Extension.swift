@@ -17,5 +17,8 @@ extension UIColor {
     
     static let grayDark = UIColor(hex: 0x404041)
     static let grayLight = UIColor(hex: 0x929497)
+    static let separatorGray = UIColor(hex: 0xE9E9E9)
+    static let groupTitleGray = UIColor(hex: 0xBBBDBF)
+    static let groupViewGray = UIColor(hex: 0xF2F2F2)
     static let brandYellow = UIColor(hex: 0xFFCD00)
 }
