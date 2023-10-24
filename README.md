@@ -1,24 +1,6 @@
 # InPost Recruitment Task
 
-## Intro
-
-We travel back in time ⏱️. InPost Mobile app was just created and you join the team to improve its feature set and **make it ready for the future**.\
-User base is growing fast and every day more people start to use it daily.
-\
-\
-You, as an experienced developer, were assigned to the project to improve its quality. The initial code is not perfect and is far from being.
-**Organize and refactor code the way you like to work** (packages, modules, layers, data flow, names, methods order etc.) while finishing your tasks listed below.
-
-## Rules
-
-- We expect the complete solution - your tasks should be considered as ready for code review or release
-- When refactoring, please keep the way how the app looks like from user perspective (excluding the changes we will ask you to do)
-- You can change and move any part you like, install any library you want as long as final product is within the rules
-- We are using static JSON files as responses, **consider it being a real server** returning your data 😉 Just as it would be a real production environment
-- Please don't change JSON files
-- Git history is also important
-
-## Tasks
+The main focus of the task was to address the following subtasks:
 
 - Add grouping to the list of `Pack`s !!!
 - Style as requested from the Design department ([Figma !!! link](https://www.figma.com/file/MzPR3whRl6KB1fFnkyM6Or/recruitment-task?node-id=0%3A1)):
@@ -26,29 +8,32 @@ You, as an experienced developer, were assigned to the project to improve its qu
     - App background
     - Fonts (typography and style)
     - Add image in the corner of the list cell
-- Sort list items in groups by:
-    - status (priority is described in `Pack.swift`)
-    - pickupDate 
-    - expireDate 
-    - storedDate 
-    - id
-- Add pull to refresh and handle refresh progress 
-- Add storing shipments locally (using Realm)
-- Add local archiving of the shipment
-    - For example via gesture, design is not important here
-    - `Pack` must stay hidden after relaunching the app
-- Fix one `Pack` appearing with unsupported status
-- Fix ViewController title disappearing in Dark Mode
 - Create unit tests !!!
 
-And remember: prepare app for the future the best way you can.
+All above tasks have been completed and you can find it in the code repository. 
 
-## Links and resources
+During working on my solution I did introduce the following changes: 
+- I reorganized the project structure
+- I introduced a couple of optimizations: 
+    - asking iOS to cache the rendered shadow
+    - make all classes `final`
+    - using `[weak self]` inside callbacks in order to avoid me
 
-- Fonts folder: [/Fonts](./Fonts)
 
-If for some reason Figma link stops working, here you can see the requested design:
+In addition, I did pick the following extra tasks:
+- Fix one `Pack` appearing with unsupported status
+    - I chose that one cause addressing unsupported statuses can help us to avoid many problems in the future e.g. crashes. 
+    - I introduced `PackStatus` enumeration, which supports one extra state: `UNKNOWN`
+    - I filter out all `Pack` with `UNKNOWN` state in order to not show them to the user
+- Sort list items in groups by
+    - I picked this one cause I think it's a matter of good UI/UX to have things sorted on the list in order to recognize them easier
+    - I added an extension to the sequence of `Pack`s in order to make the code reusable
+- Add pull to refresh and handle refresh progress 
+    - This one gives user to ability to stay up-to-date
 
-![Design from Figma](./Images/Figma.png)
+### Next steps
 
-# Good luck! 💪
+If I had more time I would consider the following
+-  Stop using `xib`s or `storyboard` in favor of the views created by code - it's a more scalable approach
+- Introduce `Dependency Injection` for all services e.g. `PackNetworking` - in order to make to code better testable
+- Introduce `Localization`'s and keep all raw String in that manner in order to support multilaguality
