@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PackView: UIView {
+final class PackView: UIView {
     
     @IBOutlet private var contentView: UIView!
     
@@ -51,11 +51,11 @@ class PackView: UIView {
     }
     
     private func setupContainerStyle() {
-        // TODO: Look out for shadow performance?
         contentContainer.layer.shadowColor = UIColor.black.cgColor
         contentContainer.layer.shadowRadius = 5
         contentContainer.layer.shadowOffset = .init(width: 0, height: 5)
         contentContainer.layer.shadowOpacity = 0.1
+        contentContainer.layer.shouldRasterize = true
         
         numberTitleLabel.textColor = .grayLight
         numberTitleLabel.font = .montserratSemiBold(11)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PackListController: UIViewController {
+final class PackListController: UIViewController {
 
     @IBOutlet private(set) var stackView: UIStackView!
     @IBOutlet private(set) var scrollView: UIScrollView!
@@ -33,7 +33,9 @@ class PackListController: UIViewController {
     
     @objc
     private func handlePullToRefresh() {
-        loadPacks()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.loadPacks()
+        }
     }
     
     private func loadPacks() {
