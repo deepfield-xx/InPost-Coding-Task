@@ -10,6 +10,9 @@ import UIKit
 class PackListController: UIViewController {
 
     @IBOutlet private(set) var stackView: UIStackView!
+    @IBOutlet private(set) var scrollView: UIScrollView!
+    
+    private let pullToRefresh = UIRefreshControl()
     
     private let packNetworking = PackNetworking()
     
@@ -19,6 +22,17 @@ class PackListController: UIViewController {
         
         view.backgroundColor = .groupViewGray
         
+        setUp()
+        loadPacks()
+    }
+    
+    private func setUp() {
+        scrollView.insertSubview(pullToRefresh, at: 0)
+        pullToRefresh.addTarget(self, action: #selector(handlePullToRefresh), for: .valueChanged)
+    }
+    
+    @objc
+    private func handlePullToRefresh() {
         loadPacks()
     }
     
@@ -46,6 +60,8 @@ class PackListController: UIViewController {
                     }
                 }
             }
+            
+            self.pullToRefresh.endRefreshing()
         }
     }
     

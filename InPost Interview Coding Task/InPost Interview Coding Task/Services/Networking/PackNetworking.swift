@@ -19,7 +19,10 @@ class PackNetworking {
         let url = Bundle.main.url(forResource: "packs", withExtension: "json")!
         let data = try! Data(contentsOf: url)
         let result = try! jsonDecoder.decode([Pack].self, from: data)
-        completion(.success(result))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            completion(.success(result))
+        }
     }
     
 }
