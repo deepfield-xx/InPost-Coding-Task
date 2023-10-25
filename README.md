@@ -10,14 +10,14 @@ The main focus of the task was to address the following subtasks:
     - Add image in the corner of the list cell
 - Create unit tests !!!
 
-All above tasks have been completed and you can find it in the code repository. 
+All above tasks have been completed and you can find them in the code repository. 
 
 During working on my solution I did introduce the following changes: 
 - I reorganized the project structure
 - I introduced a couple of optimizations: 
     - asking iOS to cache the rendered shadow
     - make all classes `final`
-    - using `[weak self]` inside callbacks in order to avoid me
+    - using `[weak self]` inside callbacks in order to avoid memory leaks
 
 
 In addition, I did pick the following extra tasks:
